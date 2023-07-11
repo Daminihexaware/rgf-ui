@@ -1,0 +1,46 @@
+.details-block{
+   width: 35%;
+   margin: auto;
+}
+
+.details-input{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+}
+
+.details-input > span{
+    font-weight: bold;
+}
+
+.years{
+    width:5rem;
+}
+label span{
+    display: block;
+    font-size: 0.75rem;
+}
+.fa-info{
+    font-size: 1rem;
+    margin-bottom: -0.5rem;
+    color:#00ad73;
+}
+
+.month{
+    width:7.2rem;
+}
+.details-button{
+    display: flex;
+    flex-direction: row-reverse;
+    /* margin-right: 2rem; */
+}
+.button{
+    width: 10rem;
+    height: 1.8rem;
+    background-color: #00ad73;
+    color:white;
+    border-radius: 0.5rem;
+    border:none;
+    font-size: 1rem;
+}
