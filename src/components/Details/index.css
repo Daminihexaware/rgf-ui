@@ -1,13 +1,69 @@
-.details-block{
-   width: 35%;
-   margin: auto;
+.details-page{
+   width: 98%;
+   /* margin: auto; */
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 5rem;
+   /* background-color: violet; */
 }
 
+.back-button{
+    background-color: transparent;
+    color:grey;
+    outline: none !important;
+    border:0;
+    margin-left: -14rem;
+}
+.fa-chevron-left{
+    margin-right: 0.5rem;
+}
+.popup{
+    position: absolute;
+    left:35%;
+    top:35%;
+    display: block;
+    width: 18rem;
+    /* height: 12rem;  */
+    background-color: white;
+    padding:1rem 3rem;
+    /* border:1px solid #00ad73; */
+}
+.popup-hide {
+    display:none;
+}
+.fa-times-circle{
+    font-size: 1.8rem;
+    color: #00ad73;
+    cursor: pointer;
+    margin-left: 16rem;
+    /* position: aboslute;
+    right:-250px;
+    top:40px; */
+}
+.details-info-blur{
+    opacity: 0.08;
+    /* background-color: rgba(255, 0, 0,0.08); */
+    pointer-events: none 
+}
+.details-info{
+ /* background-color: orange; */
+ width: 25rem;
+ margin: auto;
+}
+.horizontal-line{
+    width:4.5rem;
+    height:0.18rem;
+    color:#00ad73;
+    background-color: #00ad73;
+    margin: 0;
+}
 .details-input{
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
 }
 
 .details-input > span{
@@ -15,18 +71,31 @@
 }
 
 .years{
-    width:5rem;
+    width:5.5rem;
 }
 label span{
     display: block;
     font-size: 0.75rem;
 }
-.fa-info{
-    font-size: 1rem;
-    margin-bottom: -0.5rem;
-    color:#00ad73;
+.info-label{
+    /* position:absolute; */
+    margin-bottom: 0.5rem;
+    /* background-color: #d876b2; */
 }
-
+.info-icon{
+    position:relative;
+    right: -4px;
+    top:-8px
+}
+.fa-info{
+    font-size: 1.2rem;
+    color:#00ad73;
+    cursor:pointer;
+}
+.amount{
+    width: 5rem;
+    margin-left: 0.5rem;
+}
 .month{
     width:7.2rem;
 }
