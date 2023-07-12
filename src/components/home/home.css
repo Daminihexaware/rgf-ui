@@ -1,0 +1,8 @@
+.content-home {
+  width: 100%;
+}
+
+.controls {
+  justify-content: space-around;
+  background-color: rgb(223, 223, 226);
+}
