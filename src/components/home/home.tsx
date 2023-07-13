@@ -4,11 +4,26 @@ import { contenthome, assurance_auto, habitation } from "../../assets/images";
 const Home = () => {
   return (
     <div>
-      <div>
+      {/* <div>
         <img src={contenthome} className="content-home" />
+      </div> */}
+
+      <div className="row text-start content-home fluid-container position-relative">
+        <img src={contenthome} />
+        <span className="centered">
+          <p>
+            Le Groupe RGF:
+            <h6>le meilluer service et unne</h6>
+            <span>Protection optimale !</span>
+          </p>
+        </span>
       </div>
+
       <div className="p-5">
-        <span className="h3">compose your insurance online</span>
+        <span className="h3">
+          compose your insurance online
+          <hr className="horizontal-line" />
+        </span>
       </div>
 
       <div className="controls p-4">
@@ -26,7 +41,7 @@ const Home = () => {
               className="image-size col-md-6"
             />
           </a>
-          <a href="#" className="nav-link text-white">
+          <a href="/dashboard" className="nav-link text-white">
             <img
               src={habitation}
               // width="300"
@@ -36,15 +51,6 @@ const Home = () => {
             />
           </a>
         </div>
-
-        {/* <div className="col-md-3 d-flex justify-content-center p-5">
-          <a href="#" className="nav-link px-2 link-dark">
-            <img src={assurance_auto} height="200" />
-          </a>
-          <a href="#" className="nav-link px-2 link-dark">
-            <img src={habitation} height="200" />
-          </a>
-        </div> */}
       </div>
     </div>
   );
