@@ -1,6 +1,6 @@
 import './index.css'
-import Header from '../common/header'
-import { Vehicle_Details } from './../../constants';
+import Header from "../common/header/header";
+import { Vehicle_Details } from '../../constants';
 import moment from "moment";
 import { useState } from 'react'
 import { Link } from "react-router-dom"
