@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Routes, Route } from "react-router-dom";
 
 import { RouteLinks } from "./constants";
+import Index from "./components/vehicle-habitation";
+import VehicleSimulation from "./components/vehicle-simulation";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <Routes>
         <Route path={RouteLinks.home} element={<Home />} />
         <Route path={RouteLinks.dashboard} element={<Dashboard />} />
+        <Route path={RouteLinks.vehiclehabitation} element={<Index />} />
+        <Route path={RouteLinks.vehiclesimulation} element={<VehicleSimulation />} />
       </Routes>
     </div>
   );
