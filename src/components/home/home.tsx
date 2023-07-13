@@ -17,10 +17,34 @@ const Home = () => {
             Cliquez sur votre assurance pour simuler votre prime
           </span>
         </div>
-        <div className="row d-flex justify-content-center p-5">
-          <img src={assurance_auto} height="200" className="col-2" />
-          <img src={habitation} height="200" className="col-2" />
+        <div className="d-flex justify-content-center p-5 mr-2">
+          <a href="#dashboard" className="nav-link text-white">
+            <img
+              src={assurance_auto}
+              // width="200"
+              // height="200"
+              className="image-size col-md-6"
+            />
+          </a>
+          <a href="#" className="nav-link text-white">
+            <img
+              src={habitation}
+              // width="300"
+              // height="500"
+              className="image-size col-md-6 offset-md-2"
+              offset-md-1
+            />
+          </a>
         </div>
+
+        {/* <div className="col-md-3 d-flex justify-content-center p-5">
+          <a href="#" className="nav-link px-2 link-dark">
+            <img src={assurance_auto} height="200" />
+          </a>
+          <a href="#" className="nav-link px-2 link-dark">
+            <img src={habitation} height="200" />
+          </a>
+        </div> */}
       </div>
     </div>
   );
