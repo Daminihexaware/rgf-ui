@@ -1,9 +1,3 @@
-export const RouteLinks = {
-  home: "/",
-  dashboard: "/dashboard",
-  details: '/details'
-};
-
 export const Vehicle_Details = {
   Fuels: [
     { label: 'Sélectionnez', value: 'Sélectionnez' },
