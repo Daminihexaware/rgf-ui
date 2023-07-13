@@ -23,10 +23,10 @@
     margin-right: 0.5rem;
 }
 .fa-times-circle{
-    font-size: 2.6rem;
+    font-size: 2rem;
     color: #00ad73;
     cursor: pointer;
-    margin-left: 28rem;
+    margin-left: 22rem;
 }
 .info-icon{
     position:relative;
@@ -48,10 +48,10 @@
 /* Popup */
 .popup{
     position: absolute;
-    left:35%;
-    top:38%;
+    left:27%;
+    top:26%;
     display: block;
-    width: 34rem;
+    width: 24rem;
     /* height: 12rem;  */
     /* background-color: rgb(145, 50, 50); */
     padding:1rem 3rem;
@@ -69,7 +69,6 @@
 .details-info{
  /* background-color: orange; */
  width: 40%;
- /* margin: auto;  */
 }
 
 .years{
@@ -96,13 +95,16 @@
     /* font-size: 1.4rem; */
 }
 .euro{
-    margin-right: 1.5rem;
+    /* margin-right: 1.5rem; */
 }
 
 
 /* Dropdown */
+.month, .amount {
+    width: 6rem !important;
+}
 .amount, .month{
-    /* width: 12rem; */
+    height: 1.7rem;
 }
 .dropdown{
     outline: none;
@@ -118,3 +120,32 @@ select:focus{
     outline:none;
 }
 
+/* //Media Query */
+@media only screen and (max-width: 1024px){
+    .details-info{
+        width: 42%;
+    }
+    .popup{
+        left:30%;
+        top:24%;
+        width: 23rem;
+    }
+    .fa-times-circle{
+        margin-left: 16rem;
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 768px){
+    .details-info{
+        width: 40%;
+    }
+    .popup{
+        left:28%;
+        top:24%;
+        width: 21rem;
+    }
+    .fa-times-circle{
+        margin-left: 15rem;
+        font-size: 1.6rem;
+    }
+}
