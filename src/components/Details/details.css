@@ -88,11 +88,11 @@
     /* margin-right: 2rem; */
 }
 .btn{
-    background-color: #55b862;
-    color:white;
+    background-color: #55b862 !important;
+    color:white !important;
 }
 .btn-group-lg>.btn, .btn-sm {
-    padding: 0.2rem 4rem;
+    padding: 0.2rem 4rem !important;
     /* font-size: 1.4rem; */
 }
 .euro{
@@ -111,7 +111,7 @@
     color: #555;
 }
 .form-select{
-    width: 40%;
+    width: 40% !important;
 }
 select:focus{
     border:1.5px solid #00ad73;

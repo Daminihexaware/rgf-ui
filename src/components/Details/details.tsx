@@ -34,12 +34,12 @@ const Details = () => {
                     </h2>
 
                     <form>
-                        {/* <div className="row mb-3 p1">
+                        <div className="row mb-3 p1">
                             <div className="col-lg-6 c1">Name</div>
                             <div className='col-lg-6 c2 d-flex justify-content-end '>
                                 <div className="  c3">Name</div>
                             </div>
-                        </div> */}
+                        </div>
                         <div className='row mb-3' >
                             <div className="col-lg-7"> Carburant </div>
                             {toggle ?
@@ -181,7 +181,7 @@ const Details = () => {
                             <div className="col-lg-7"> Date d’achat de votre voiture</div>
                             <input type="month" className='month dropdown col-lg-5' placeholder='mm/aaaa' min={FormatToday} max={FormatToday} required />
                         </div>
-                        < div className="details-button" >
+                        <div className="details-button" >
                             <button type="submit" className='btn btn-sm'>Suivant</button>
                         </div>
                     </form>
