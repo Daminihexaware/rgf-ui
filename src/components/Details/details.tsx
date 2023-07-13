@@ -1,5 +1,4 @@
-import './index.css'
-import Header from "../common/header/header";
+import './details.css'
 import { Vehicle_Details } from '../../constants';
 import moment from "moment";
 import { useState } from 'react'
@@ -7,16 +6,15 @@ import { Link } from "react-router-dom"
 
 const Details = () => {
     const [open, setOpen] = useState(false)
-    const [toggle, setToggle] = useState(true)
+    const [toggle, setToggle] = useState(false)
     console.log(open)
     let FormatToday = moment(new Date()).format("MM-YYYY");
     const handleClick = () => {
         setOpen(!open)
     }
     return (
-        <div>
-            <Header />
-            <div className='details-page d-flex'>
+        <div className='container'>
+            <div className='d-flex justify-content-center pb-8'>
                 {/* details-page */}
 
                 <div className={open ? 'popup' : 'popup-hide'}>
@@ -36,10 +34,16 @@ const Details = () => {
                     </h2>
 
                     <form>
-                        <div className='details-input' >
-                            <div> Carburant </div>
+                        {/* <div className="row mb-3 p1">
+                            <div className="col-lg-6 c1">Name</div>
+                            <div className='col-lg-6 c2 d-flex justify-content-end '>
+                                <div className="  c3">Name</div>
+                            </div>
+                        </div> */}
+                        <div className='row mb-3' >
+                            <div className="col-lg-7"> Carburant </div>
                             {toggle ?
-                                <select className="form-select form-select-lg dropdown" id="fuels" >
+                                <select className="form-select form-select-sm col-lg-5" id="fuels" >
                                     {
                                         Vehicle_Details.Fuels
                                             .length > 0 &&
@@ -55,12 +59,12 @@ const Details = () => {
                                             }
                                         )}
                                 </select>
-                                : <span> Esscence </span>}
+                                : <span className="col-lg-5 d-flex justify-content-end fw-semibold"> Esscence </span>}
                         </div>
 
-                        <div className='details-input' >
-                            <div  > Marque </div>
-                            {toggle ? <select className="form-select form-select-lg dropdown" id="fuels" >
+                        <div className='row mb-3' >
+                            <div className="col-lg-7"> Marque </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5" id="fuels" >
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -76,11 +80,11 @@ const Details = () => {
                                         }
                                     )}
                             </select>
-                                : <span> Volkswagen </span>}
+                                : <span className="col-lg-5 d-flex justify-content-end fw-semibold"> Volkswagen </span>}
                         </div>
-                        <div className='details-input' >
-                            <div > Modéle </div>
-                            {toggle ? <select className="form-select form-select-lg dropdown" id="fuels" >
+                        <div className='row mb-3' >
+                            <div className="col-lg-7"> Modéle </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5" id="fuels" >
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -96,11 +100,11 @@ const Details = () => {
                                         }
                                     )}
                             </select>
-                                : <span> Golf Vill </span>}
+                                : <span className="col-lg-5 d-flex justify-content-end fw-semibold"> Golf Vill </span>}
                         </div>
-                        <div className='details-input' >
-                            <div > Type </div>
-                            {toggle ? <select className="form-select form-select-lg dropdown" id="fuels" >
+                        <div className='row mb-3' >
+                            <div className="col-lg-7"> Type </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5" id="fuels" >
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -116,12 +120,12 @@ const Details = () => {
                                         }
                                     )}
                             </select>
-                                : <span > tsi 110 </span>}
+                                : <span className="col-lg-5 d-flex justify-content-end fw-semibold"> tsi 110 </span>}
                         </div>
                         {toggle ? <></>
-                            : <div className='details-input' >
-                                <div > Annee de construction </div>
-                                <select className="form-select form-select-lg dropdown" id="fuels" >
+                            : <div className='row mb-3' >
+                                <div className="col-lg-7"> Annee de construction </div>
+                                <select className="form-select form-select-sm col-lg-5" id="fuels" >
                                     {
                                         Vehicle_Details.Fuels
                                             .length > 0 &&
@@ -138,9 +142,9 @@ const Details = () => {
                                         )}
                                 </select>
                             </div>}
-                        {toggle ? <div className='details-input' >
-                            <div> Première immatriculation </div>
-                            <select className="form-select form-select-sm dropdown" id="cars" required>
+                        {toggle ? <div className='row mb-3' >
+                            <div className="col-lg-7"> Première immatriculation </div>
+                            <select className="form-select form-select-sm col-lg-5" id="cars" required>
                                 {
                                     Vehicle_Details.Years
                                         .length > 0 &&
@@ -158,25 +162,27 @@ const Details = () => {
                             </select>
                         </div>
                             : <></>}
-                        <div className='details-input' >
-                            <div className='info-label'>
-                                Valeur facture(tvac)
-                                <i className="fa fa-info info-icon" onClick={handleClick} aria-hidden="true"> </i>
-                                <div> remises comprises (hors reprise) </div>
+                        <div className='row mb-3' >
+                            <div className='info-label col-lg-8'>
+                                <div>
+                                    Valeur facture(tvac)
+                                    <i className="fa fa-info info-icon" onClick={handleClick} aria-hidden="true"> </i>
+                                </div>
+                                <span> remises comprises (hors reprise) </span>
                             </div>
 
-                            <div className="">
+                            <div className="col-lg-4">
                                 <span className='euro'>&euro;</span>
                                 <input type="number" min="2000" max='157300' className='amount dropdown' placeholder='0,00' />
 
                             </div>
                         </div>
-                        < div className='details-input' >
-                            <div> Date d’achat de votre voiture</div>
-                            <input type="month" className='month dropdown' placeholder='mm/aaaa' min={FormatToday} max={FormatToday} required />
+                        < div className='row mb-3' >
+                            <div className="col-lg-7"> Date d’achat de votre voiture</div>
+                            <input type="month" className='month dropdown col-lg-5' placeholder='mm/aaaa' min={FormatToday} max={FormatToday} required />
                         </div>
                         < div className="details-button" >
-                            <button type="submit" className='btn btn-lg'>Suivant</button>
+                            <button type="submit" className='btn btn-sm'>Suivant</button>
                         </div>
                     </form>
                 </div>
