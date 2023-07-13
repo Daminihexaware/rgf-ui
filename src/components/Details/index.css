@@ -1,5 +1,5 @@
 .details-page{
-   width: 98%;
+   width: 100%;
    /* margin: auto; */
    display: flex;
    justify-content: center;
@@ -14,7 +14,8 @@
     color:grey;
     outline: none !important;
     border:0;
-    margin-left: -14rem;
+    margin-left: -1rem;
+    text-decoration: underline grey 0.08rem;
 }
 .fa-chevron-left{
     margin-right: 0.5rem;
@@ -22,11 +23,11 @@
 .popup{
     position: absolute;
     left:35%;
-    top:35%;
+    top:38%;
     display: block;
-    width: 18rem;
+    width: 34rem;
     /* height: 12rem;  */
-    background-color: white;
+    /* background-color: rgb(145, 50, 50); */
     padding:1rem 3rem;
     /* border:1px solid #00ad73; */
 }
@@ -34,13 +35,10 @@
     display:none;
 }
 .fa-times-circle{
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     color: #00ad73;
     cursor: pointer;
-    margin-left: 16rem;
-    /* position: aboslute;
-    right:-250px;
-    top:40px; */
+    margin-left: 28rem;
 }
 .details-info-blur{
     opacity: 0.08;
@@ -49,18 +47,18 @@
 }
 .details-info{
  /* background-color: orange; */
- width: 25rem;
+ width: 36%;
  margin: auto;
 }
 .horizontal-line{
-    width:4.5rem;
+    width:9rem;
     height:0.18rem;
     color:#00ad73;
     background-color: #00ad73;
     margin: 0;
 }
 .details-input{
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     display: flex;
     justify-content: space-between;
     /* padding-right: 2rem; */
@@ -72,6 +70,7 @@
 
 .years{
     width:5.5rem;
+    outline: none;
 }
 label span{
     display: block;
@@ -92,24 +91,104 @@ label span{
     color:#00ad73;
     cursor:pointer;
 }
-.amount{
-    width: 5rem;
-    margin-left: 0.5rem;
-}
-.month{
-    width:7.2rem;
-}
+
+
 .details-button{
     display: flex;
     flex-direction: row-reverse;
     /* margin-right: 2rem; */
 }
-.button{
-    width: 10rem;
-    height: 1.8rem;
-    background-color: #00ad73;
+.btn{
+    background-color: #55b862;
     color:white;
-    border-radius: 0.5rem;
-    border:none;
-    font-size: 1rem;
+}
+.btn-group-lg>.btn, .btn-lg {
+    padding: 0.5rem 5rem;
+    font-size: 1.4rem;
+}
+.euro{
+    margin-right: 1.5rem;
+}
+select{
+    width: 24rem;
+}
+select:focus{
+    border:1.5px solid #00ad73;
+    outline:none;
+}
+.amount, .month{
+    width: 12rem;
+}
+.dropdown{
+    outline: none;
+    height: 3.6rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.3rem;
+    line-height: 1.42857143;
+    /* margin-left: 1.5rem; */
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #555;
+}
+@media only screen and (max-width: 1024px) {
+    .details-input > label {
+      font-size: 0.8rem;
+    }
+    select{
+        width: 18rem;
+    }
+    .dropdown{
+        height: 3.4rem;
+        padding: 0.375rem 0.75rem;
+        font-size: 1.3rem;
+        line-height: 1.42857143;
+    }
+    .amount, .month{
+        width: 9rem;
+    }
+    .fa-info{
+        font-size: 0.9rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .amount {
+        width: 4rem;
+        margin-left: 0.5rem;
+      }
+    .month{
+        width:6.2rem;
+    }
+    .details-info{
+        width: 48%;
+        margin: auto;
+       }
+    .fa-info{
+        font-size: 0.8rem;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .details-input{
+        flex-direction: column;
+    }
+    .details-button{
+        flex-direction: row;
+    }
+    .details-page{
+       align-items: start;
+       justify-content: start;
+    }
+    .details-info{
+        width: 100%;
+        margin-left: 5%;
+    }
+    .fa-info{
+        font-size: 0.8rem;
+    }
+    select{
+        width: 30rem;
+    }
+    .amount, .month{
+        width: 15rem;
+    }
 }
