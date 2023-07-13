@@ -1,0 +1,16 @@
+.content-home {
+    width: 100%;
+    height: 300px;
+  }
+  
+  .headerColor {
+    color: grey;
+  }
+
+  .bgColor {
+    background-color: #002147;
+  }
+
+  .iconSize {
+    width:60px;
+}
