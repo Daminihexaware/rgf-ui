@@ -18,7 +18,7 @@ const Home = () => {
           </span>
         </div>
         <div className="d-flex justify-content-center p-5 mr-2">
-          <a href="#dashboard" className="nav-link text-white">
+          <a href="habitation" className="nav-link text-white">
             <img
               src={assurance_auto}
               // width="200"

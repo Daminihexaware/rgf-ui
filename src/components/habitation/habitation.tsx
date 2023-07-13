@@ -1,4 +1,4 @@
-import "./index.css";
+import "./habitation.css";
 import {
   calculation,
   calendar,
@@ -7,9 +7,9 @@ import {
 } from "../../assets/images";
 import { Link } from "react-router-dom";
 
-const Index = () => {
+const VehicleHabitation = () => {
   return (
-    <div>
+    <div className="container">
       <div>
         <img src={habitationImg} className="content-home" />
       </div>
@@ -19,10 +19,10 @@ const Index = () => {
         </span>
       </div>
 
-      <div className="container bgColor p-4">
+      <div className="container bgColor p-5">
         <div className="row p-2">
           <span className="h5 text-white">
-            Je realiseune simulation en ligne
+            Composez votre assurance habitation ideale
           </span>
         </div>
         <div className="row d-flex align-items-center justify-content-center p-5">
@@ -68,4 +68,4 @@ const Index = () => {
     </div>
   );
 };
-export default Index;
+export default VehicleHabitation;

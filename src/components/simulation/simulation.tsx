@@ -1,4 +1,4 @@
-import "./index.css";
+import "./simulation.css";
 import { contenthome } from "../../assets/images";
 
 const VehicleSimulation = () => {
