@@ -11,17 +11,19 @@ const Home = () => {
       <div className="row text-start content-home fluid-container position-relative">
         <img src={contenthome} />
         <span className="centered">
-          <p>
-            Le Groupe RGF:
-            <h6>le meilluer service et unne</h6>
-            <span>Protection optimale !</span>
-          </p>
+          {/* Le Groupe RGF: */}
+          The RGF Group:
+          <h6>
+            {/* <p>le meilluer service et unne </p>
+            <p>protection optimale !</p> */}
+            <p>The best service and optimum protection!</p>
+          </h6>
         </span>
       </div>
 
       <div className="p-5">
         <span className="h3">
-          compose your insurance online
+          Compose your insurance online
           <hr className="horizontal-line" />
         </span>
       </div>
@@ -29,7 +31,8 @@ const Home = () => {
       <div className="controls p-4">
         <div className="row text-white p-2">
           <span className="h4">
-            Cliquez sur votre assurance pour simuler votre prime
+            {/* Cliquez sur votre assurance pour simuler votre prime */}
+            Click on your insurance to simulate your premium
           </span>
         </div>
         <div className="d-flex justify-content-center p-5 mr-2">
@@ -47,7 +50,6 @@ const Home = () => {
               // width="300"
               // height="500"
               className="image-size col-md-6 offset-md-2"
-              offset-md-1
             />
           </a>
         </div>

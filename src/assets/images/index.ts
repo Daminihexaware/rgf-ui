@@ -8,5 +8,6 @@ import calculation from "./calculation.png";
 import calendar from "./calendar.png";
 import mail from "./mail.png";
 import habitationImg from "./habitationImg.png";
+import rgfInsurance from "./rgfinsurances.png";
 
-export { logo, contenthome, assurance_auto, habitation, headerlogo, nngroup, calculation, calendar, mail, habitationImg};
+export { logo, contenthome, assurance_auto, habitation, headerlogo, nngroup, calculation, calendar, mail, habitationImg, rgfInsurance };
