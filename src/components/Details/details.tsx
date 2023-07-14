@@ -88,7 +88,7 @@ const Details = () => {
                                 <div className="  c3">Name</div>
                             </div>
                         </div> */}
-                        <div className='row mb-3' >
+                        <div className='detail-row row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-7"> Carburant </div>
                             {toggle ?
                                 <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='carburant' value={carburant} onChange={handleChange} >
@@ -111,7 +111,7 @@ const Details = () => {
                                 : <span className="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-end fw-semibold"> Esscence </span>}
                         </div>
 
-                        <div className='row mb-3' >
+                        <div className='detail-row row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-12"> Marque </div>
                             {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='marque' value={marque} onChange={handleChange}  >
                                 <option value="" disabled >Sélectionnez</option>
@@ -132,7 +132,7 @@ const Details = () => {
                             </select>
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> Volkswagen </span>}
                         </div>
-                        <div className='row mb-3' >
+                        <div className='detail-row row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-12"> Modéle </div>
                             {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='model' value={model} onChange={handleChange}  >
                                 <option value="" disabled >Sélectionnez</option>
@@ -153,7 +153,7 @@ const Details = () => {
                             </select>
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> Golf Vill </span>}
                         </div>
-                        <div className='row mb-3' >
+                        <div className='detail-row row mb-3' >
                             <div className="col-lg-7 col-md-7"> Type </div>
                             {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='type' value={type} onChange={handleChange}  >
                                 <option value="" disabled >Sélectionnez</option>
@@ -174,7 +174,7 @@ const Details = () => {
                             </select>
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> tsi 110 </span>}
                         </div>
-                        {!toggle ? <div className='row mb-3' >
+                        {!toggle ? <div className='detail-row row mb-3' >
                             <div className="col-lg-7 col-md-7"> Annee de construction </div>
                             <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
                                 {
@@ -214,7 +214,7 @@ const Details = () => {
                             </select>
                         </div>
                             : <></>}
-                        <div className='row mb-3' >
+                        <div className='detail-row row mb-3' >
                             <div className='info-label col-lg-8 col-md-8 col-sm-8'>
                                 <div>
                                     Valeur facture(tvac)
@@ -231,7 +231,7 @@ const Details = () => {
                                 </div>
                             </div>
                         </div>
-                        < div className='row mb-3' >
+                        < div className='detail-row row mb-3' >
                             <div className="col-lg-7 col-md-7"> Date d’achat de votre voiture</div>
                             <div className='col-lg-5 col-md-5 d-flex justify-content-sm-start justify-content-md-end'>
                                 <input type="month" className='month dropdown ' placeholder='mm/aaaa' name='month' value={month} onChange={handleChange} required />

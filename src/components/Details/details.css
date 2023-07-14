@@ -176,7 +176,7 @@ select:focus{
         display: flex;
         flex-direction: row;
     }
-    .row > div, .row > span{
+    .detail-row > div, .detail-row > span{
         width: 50% !important;
     }
     .horizontal-line{
