@@ -65,7 +65,7 @@ const Details = () => {
             <div className='d-flex justify-content-center align-items-center pb-8'>
                 {/* details-page */}
 
-                <div className={open ? 'popup' : 'popup-hide'}>
+                <div className={open ? 'popup1' : 'popup-hide'}>
                     <i className="fa fa-times-circle" onClick={handleClick} aria-hidden="true"></i>
                     <h2>Valeur facture</h2>
                     <p>Il est possible de retrouver cette information sur la facture, le bon de commande ou le contrat de vente qui vous a été remis lors de l'achat de votre voiture.</p>
@@ -245,13 +245,6 @@ const Details = () => {
                 </div>
             </div>
         </div>
-        // <div className="container">
-        //     <div className="row">
-        //         <div className="col-md-4">.col-md-8</div>
-        //         <div className="col-md-4">.col-md-8</div>
-        //         <div className="col-6 col-md-4">.col-6 .col-md-4</div>
-        //     </div>
-        // </div>
     )
 }
 
