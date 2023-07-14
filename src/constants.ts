@@ -1,7 +1,7 @@
 export const RouteLinks = {
   home: "/",
   dashboard: "/dashboard",
-  simulation: "/simulation",
+  simulation: "/VehicleSimulation",
   habitation: "/habitation",
   details: '/details'
 };
