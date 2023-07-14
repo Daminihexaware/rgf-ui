@@ -14,3 +14,12 @@
   .iconSize {
     width:60px;
 }
+
+.horizontal-line {
+  width: 5rem;
+  height: 0.18rem;
+  color: #20ea3c;
+  background-color: #20ea3c;
+  margin: 0;
+  margin-top: 8px;
+}

@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 const VehicleHabitation = () => {
   return (
-    <div className="container">
+    <div>
       <div>
         <img src={habitationImg} className="content-home" />
       </div>
-      <div className="p-5">
+      <div className=" container p-5">
         <span className="h5 headerColor">
           Assurez vous de multiple dommages lies a votre habitation !
         </span>
@@ -23,45 +23,67 @@ const VehicleHabitation = () => {
         <div className="row p-2">
           <span className="h5 text-white">
             Composez votre assurance habitation ideale
+            <hr className="horizontal-line" />
           </span>
         </div>
         <div className="row d-flex align-items-center justify-content-center p-5">
           <div className="row">
-            <img className="col-3 p-2 order-1 iconSize" src={calculation} />
-            <span className="h6 text-white text-center col-6 p-0 order-1">
-              Je prends rendez-vous avec un conseiller
-            </span>
-            <Link
-              to="/VehicleSimulation" style={{ width: "200px",background:'lightgreen' }}
-              className="btn btn-primary col-3 mb-2 order-1"
-            >
-              Simulation
-            </Link>
+            <div className="col-2">
+              <img className="p-2 iconSize" src={calculation} />
+            </div>
+            <div className="col-6">
+              <span className="h6 text-white text-center p-2">
+                Je realise une simulation en ligne
+              </span>
+            </div>
+            <div className="col-4">
+              <Link
+                to="/simulation"
+                style={{ width: "210px" }}
+                className="btn btn-sm mb-2"
+              >
+                Simulation
+              </Link>
+            </div>
           </div>
           <div className="row">
-            <img className="col-3 p-2 order-1 iconSize" src={calendar} />
-            <span className="h6 text-white text-center col-6 p-0 order-1">
-             Je souhaite recevoir plus d informations
-            </span>
-            <Link
-              to="/VehicleSimulation" style={{ width: "200px",background:'orange' }}
-              className="btn btn-primary col-3 mb-2 order-1"
-            >
-              Rendez-vous
-            </Link>
+            <div className="col-2">
+              <img className="p-2 iconSize" src={calendar} />
+            </div>
+            <div className="col-6">
+              <span className="h6 text-white text-center p-2">
+                Je prends rendez-vous avec un conseiller
+              </span>
+            </div>
+            <div className="col-4">
+              <Link
+                to="/VehicleSimulation"
+                style={{ width: "210px", backgroundColor: "orange !important" }}
+                className="btn btn-sm col-3 mb-2"
+              >
+                Rendez-vous
+              </Link>
+            </div>
           </div>
 
           <div className="row">
-            <img className="col-3 p-2 order-1 iconSize" src={mail} />
-            <span className="h6 text-white text-center col-6 p-0 order-1">
-              Composez votre assurance habitation ideale
-            </span>
-            <Link
-              to="/VehicleSimulation" style={{ width: "200px",background:'skyblue' }}
-              className="btn btn-primary col-3 mb-2 order-1 iconSize"
-            >
-              Contact
-            </Link>
+            <div className="col-2">
+              <img className="p-2 iconSize" src={mail} />
+            </div>
+            <div className="col-6">
+              <span className="h6 text-white text-center col-6 p-2">
+                Je souhaite recevoir plus d informations
+              </span>
+            </div>
+            <div className="col-4">
+              <Link
+                to="/VehicleSimulation"
+                style={{ width: "210px", backgroundColor: "skyblue !important" }}
+                className="btn btn-sm mb-2 iconSize"
+              >
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
       </div>
