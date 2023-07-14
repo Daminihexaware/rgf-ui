@@ -1,8 +1,14 @@
 import "./simulation.css";
 import { contenthome } from "../../assets/images";
 import { Link } from "react-router-dom";
+import { useState } from 'react'
 
 const VehicleSimulation = () => {
+  const [vNumber, setVnumber] = useState('')
+  const handleChange = (e) => {
+     e.preventDefault()
+     setVnumber(e.target.value)
+  }
   return (
     <div>
       <div>
@@ -27,6 +33,8 @@ const VehicleSimulation = () => {
               type="text"
               width="100"
               placeholder="ABCDEFG1234567890"
+              value={vNumber}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -34,14 +42,18 @@ const VehicleSimulation = () => {
 
       <div style={{ float: "right" }}>
         <div className="p-2">
-          <button disabled type="button" className="btn btn-primary">
-            {/* Suivant */}
-            Next
-          </button>
+          <Link
+            to="/Car/YourCarDetails">
+            <button type="button" disabled={!vNumber}
+            className="btn btn-primary">
+              {/* Suivant */}
+              Next
+            </button>
+          </Link>
         </div>
         <div className="p-2">
           <Link
-            to="/details"
+            to="/Car/YourCar"
             style={{ width: "200px", background: "lightgreen" }}
             className="btn btn-primary col-3 mb-2 order-1"
           >

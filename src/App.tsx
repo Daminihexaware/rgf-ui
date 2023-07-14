@@ -16,7 +16,8 @@ const App = () => {
         <Route path={RouteLinks.dashboard} element={<Dashboard />} />
         <Route path={RouteLinks.habitation} element={<VehicleHabitation />} />
         <Route path={RouteLinks.simulation} element={<VehicleSimulation />} />
-        <Route path={RouteLinks.details} element={<Details />} />
+        <Route path={RouteLinks.carform} element={<Details />} />
+        <Route path={RouteLinks.cardetails} element={<Details />} />
       </Routes>
     </div>
   );

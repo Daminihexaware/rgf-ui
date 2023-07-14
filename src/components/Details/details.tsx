@@ -1,17 +1,65 @@
 import './details.css'
 import { Vehicle_Details } from '../../constants';
 import moment from "moment";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 
 const Details = () => {
     const [open, setOpen] = useState(false)
     const [toggle, setToggle] = useState(true)
-    console.log(open)
+    const [amount, setAmount] = useState('')
+    const [month, setMonth] = useState('')
+    const [carburant, setCaburant] = useState('')
+    const [marque, setMarque] = useState('')
+    const [model, setModel] = useState('')
+    const [type, setType] = useState('')
+    const [years, setYears] = useState('')
+    const handleChange = (e) => {
+        if (e.target.name == "amount") {
+            setAmount(e.target.value)
+        } else if (e.target.name == "month") {
+            setMonth(e.target.value)
+        } else if (e.target.name == "carburant") {
+            setCaburant(e.target.value)
+        } else if (e.target.name == "marque") {
+            setMarque(e.target.value)
+        } else if (e.target.name == "model") {
+            setModel(e.target.value)
+        }
+        else if (e.target.name == "type") {
+            setType(e.target.value)
+        }
+        else if (e.target.name == "years") {
+            setYears(e.target.value)
+        }
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(years, 'years')
+        console.log("Form is Submitted")
+        setAmount('');
+        setMonth('');
+        setCaburant('')
+        setMarque('')
+        setModel('')
+        setYears('')
+        setType('')
+    }
+    // console.log(open)
     let FormatToday = moment(new Date()).format("MM-YYYY");
     const handleClick = () => {
         setOpen(!open)
     }
+    useEffect(() => {
+        console.log(window.location.pathname, 'path')
+        if (window.location.pathname === "/Car/YourCarDetails") {
+            setToggle(false)
+        }
+        if (window.location.pathname === "/Car/YourCar") {
+            setToggle(true)
+        }
+    }, [])
+
     return (
         <div className='container'>
             <div className='d-flex justify-content-center align-items-center pb-8'>
@@ -24,7 +72,7 @@ const Details = () => {
                     <p>Si vous n'avez plus ces documents, vous pouvez vérifier vos relevés de compte pour retrouver le montant et la date de paiement.</p>
                 </div>
                 <div className={open ? 'details-info-blur' : 'details-info'}>
-                    <Link to="/">
+                    <Link to="/VehicleSimulation">
                         <button className='back-button'>
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                             Retour</button>
@@ -33,17 +81,18 @@ const Details = () => {
                         <hr className='horizontal-line' />
                     </h2>
 
-                    <form>
-                        <div className="row mb-3 p1">
-                            <div className="col-lg-6 c1">Name</div>
-                            <div className='col-lg-6 c2 d-flex justify-content-end '>
+                    <form className='needs-validation' onSubmit={handleSubmit}>
+                        {/* <div className="row mb-3 p1">
+                            <div className="col-sm-1 c1">Name</div>
+                            <div className='col-sm-1 c2 d-flex justify-content-end '>
                                 <div className="  c3">Name</div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='row mb-3' >
-                            <div className="col-lg-7 col-md-7"> Carburant </div>
+                            <div className="col-lg-7 col-md-7 col-sm-7"> Carburant </div>
                             {toggle ?
-                                <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                                <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='carburant' value={carburant} onChange={handleChange} >
+                                    <option value="" disabled >Sélectionnez</option>
                                     {
                                         Vehicle_Details.Fuels
                                             .length > 0 &&
@@ -59,12 +108,13 @@ const Details = () => {
                                             }
                                         )}
                                 </select>
-                                : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> Esscence </span>}
+                                : <span className="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-end fw-semibold"> Esscence </span>}
                         </div>
 
                         <div className='row mb-3' >
-                            <div className="col-lg-7 col-md-7"> Marque </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                            <div className="col-lg-7 col-md-7 col-sm-12"> Marque </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='marque' value={marque} onChange={handleChange}  >
+                                <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -83,8 +133,9 @@ const Details = () => {
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> Volkswagen </span>}
                         </div>
                         <div className='row mb-3' >
-                            <div className="col-lg-7 col-md-7"> Modéle </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                            <div className="col-lg-7 col-md-7 col-sm-12"> Modéle </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='model' value={model} onChange={handleChange}  >
+                                <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -104,7 +155,8 @@ const Details = () => {
                         </div>
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Type </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='type' value={type} onChange={handleChange}  >
+                                <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -122,29 +174,29 @@ const Details = () => {
                             </select>
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> tsi 110 </span>}
                         </div>
-                        {toggle ? <></>
-                            : <div className='row mb-3' >
-                                <div className="col-lg-7 col-md-7"> Annee de construction </div>
-                                <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
-                                    {
-                                        Vehicle_Details.Fuels
-                                            .length > 0 &&
-                                        Vehicle_Details.Fuels?.map(
-                                            (item, index) => {
-                                                return (
-                                                    <option
-                                                        key={index}
-                                                        value={item.value} >
-                                                        {item.label}
-                                                    </option>
-                                                )
-                                            }
-                                        )}
-                                </select>
-                            </div>}
+                        {!toggle ? <div className='row mb-3' >
+                            <div className="col-lg-7 col-md-7"> Annee de construction </div>
+                            <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                                {
+                                    Vehicle_Details.Fuels
+                                        .length > 0 &&
+                                    Vehicle_Details.Fuels?.map(
+                                        (item, index) => {
+                                            return (
+                                                <option
+                                                    key={index}
+                                                    value={item.value} >
+                                                    {item.label}
+                                                </option>
+                                            )
+                                        }
+                                    )}
+                            </select>
+                        </div>
+                            : <></>}
                         {toggle ? <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Première immatriculation </div>
-                            <select className="form-select form-select-sm col-lg-5 col-md-5" id="cars" required>
+                            <select className="form-select form-select-sm col-lg-5 col-md-5 years col-sm-12" id="cars" required name='years' value={years} onChange={handleChange}  >
                                 {
                                     Vehicle_Details.Years
                                         .length > 0 &&
@@ -163,7 +215,7 @@ const Details = () => {
                         </div>
                             : <></>}
                         <div className='row mb-3' >
-                            <div className='info-label col-lg-8 col-md-8'>
+                            <div className='info-label col-lg-8 col-md-8 col-sm-8'>
                                 <div>
                                     Valeur facture(tvac)
                                     <i className="fa fa-info info-icon" onClick={handleClick} aria-hidden="true"> </i>
@@ -171,19 +223,22 @@ const Details = () => {
                                 <span> remises comprises (hors reprise) </span>
                             </div>
 
-                            <div className="col-lg-4 col-md-4 d-flex justify-content-end">
+                            <div className="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-sm-start justify-content-md-end ">
                                 <span className='euro mr-5 pr-5'>&euro;</span>
-                                <input type="number" min="2000" max='157300' className='amount dropdown ' placeholder='0,00' />
+                                <input type="number" min="2000" max='157300' className='form-control dropdown amount' name='amount' value={amount} onChange={handleChange} placeholder='0,00' />
+                                <div className="invalid-feedback">
+                                    Please choose a Valid Amount.
+                                </div>
                             </div>
                         </div>
                         < div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Date d’achat de votre voiture</div>
-                            <div className='col-lg-5 col-md-5 d-flex justify-content-end'>
-                                <input type="month" className='month dropdown ' placeholder='mm/aaaa' min={FormatToday} max={FormatToday} required />
+                            <div className='col-lg-5 col-md-5 d-flex justify-content-sm-start justify-content-md-end'>
+                                <input type="month" className='month dropdown ' placeholder='mm/aaaa' name='month' value={month} onChange={handleChange} required />
                             </div>
 
                         </div>
-                        <div className="details-button" >
+                        <div className="submit-button" >
                             <button type="submit" className='btn btn-sm'>Suivant</button>
                         </div>
                     </form>
