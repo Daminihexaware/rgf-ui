@@ -15,15 +15,17 @@ const VehicleHabitation = () => {
       </div>
       <div className=" container p-5">
         <span className="h5 headerColor">
-          Assurez vous de multiple dommages lies a votre habitation !
+          {/* Assurez vous de multiple dommages lies a votre habitation ! */}
+          Insure your home against multiple damages!
         </span>
       </div>
 
       <div className="container bgColor p-5">
         <div className="row p-2">
           <span className="h5 text-white">
-            Composez votre assurance habitation ideale
+            Compose your ideal home insurance policy
             <hr className="horizontal-line" />
+            {/* Composez votre assurance habitation ideale */}
           </span>
         </div>
         <div className="row d-flex align-items-center justify-content-center p-5">
@@ -33,12 +35,13 @@ const VehicleHabitation = () => {
             </div>
             <div className="col-6">
               <span className="h6 text-white text-center p-2">
-                Je realise une simulation en ligne
+                {/* Je prends rendez-vous avec un conseiller */}I make an online
+                simulation
               </span>
             </div>
             <div className="col-4">
               <Link
-                to="/simulation"
+                to="/VehicleSimulation"
                 style={{ width: "210px" }}
                 className="btn btn-sm mb-2"
               >
@@ -52,7 +55,8 @@ const VehicleHabitation = () => {
             </div>
             <div className="col-6">
               <span className="h6 text-white text-center p-2">
-                Je prends rendez-vous avec un conseiller
+                {/* Je souhaite recevoir plus d informations */}Make an
+                appointment with a consultant
               </span>
             </div>
             <div className="col-4">
@@ -72,13 +76,18 @@ const VehicleHabitation = () => {
             </div>
             <div className="col-6">
               <span className="h6 text-white text-center col-6 p-2">
-                Je souhaite recevoir plus d informations
+                {/* Composez votre assurance habitation ideale */}
+                Compose your ideal home insurance I would like to receive more
+                information
               </span>
             </div>
             <div className="col-4">
               <Link
                 to="/VehicleSimulation"
-                style={{ width: "210px", backgroundColor: "skyblue !important" }}
+                style={{
+                  width: "210px",
+                  backgroundColor: "skyblue !important",
+                }}
                 className="btn btn-sm mb-2 iconSize"
               >
                 Contact

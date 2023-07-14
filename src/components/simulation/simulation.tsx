@@ -2,6 +2,7 @@ import "./simulation.css";
 import { contenthome } from "../../assets/images";
 import { useState } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const VehicleSimulation = () => {
   const [open, setOpen] = useState(false);
@@ -59,14 +60,19 @@ const VehicleSimulation = () => {
             <img src={contenthome} className="content-home" />
           </div>
           <div className="p-4">
-            <span className="h4">Simulation en ligne</span>
+            <span className="h4">
+              {" "}
+              {/* Simulation en ligne */}
+              Online simulation
+            </span>
             <hr className="horizontal-line" />
           </div>
 
           <div className="p-3">
             <div className="row p-2">
               <span className="h6">
-                Remplissez votre numero de chassis
+                {/* Remplissez votre numero de chassis */}
+                Enter your chassis number
                 <i
                   className="fa fa-info info-icon"
                   onClick={handleClick}
@@ -90,13 +96,18 @@ const VehicleSimulation = () => {
           <div style={{ float: "right", borderRadius: "4px" }}>
             <div className="p-2">
               <button disabled={!value} type="button" className="btn btn-sm">
-                Suivant
+                {/* Suivant */}
+                Next
               </button>
             </div>
             <div className="p-2">
-              <button type="button" className="btn btn-sm">
-                Sans numero de chassis
-              </button>
+              <Link
+                to="/details"
+                style={{ width: "200px", background: "lightgreen" }}
+                className="btn btn-md col-3 mb-2 order-1"
+              >
+                Without chassis number
+              </Link>
             </div>
           </div>
         </div>
