@@ -63,7 +63,7 @@ const Details = () => {
       <div className="d-flex justify-content-center align-items-center pb-8">
         {/* details-page */}
 
-        <div className={open ? "popup" : "popup-hide"}>
+        <div className={open ? "popup1" : "popup-hide"}>
           <i
             className="fa fa-times-circle"
             onClick={handleClick}

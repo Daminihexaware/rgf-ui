@@ -46,9 +46,9 @@
     margin: 0;
 }
 /* Popup */
-.popup{
+.popup1{
     position: fixed;
-    left:36%;
+    left:34%;
     top:26%;
     display: block;
     width: 21rem;
@@ -121,7 +121,7 @@ select:focus{
     .details-info{
         width: 42%;
     }
-    .popup{
+    .popup1{
         left:32%;
         top:24%;
         width: 21rem;
@@ -135,7 +135,7 @@ select:focus{
     .details-info{
         width: 40%;
     }
-    .popup{
+    .popup1{
         left:28%;
         top:24%;
         width: 21rem;
@@ -156,8 +156,8 @@ select:focus{
    .form-select{
       width: 100% !important;
    }
-    .popup{
-        left:10%;
+    .popup1{
+        left:3%;
         top:24%;
         width: 21rem;
     }
@@ -181,5 +181,12 @@ select:focus{
     }
     .horizontal-line{
         width:4.8rem;
+    }
+}
+@media only screen and (max-width: 320px){
+    .popup1{
+        left:0%;
+        padding:1rem 2rem;
+
     }
 }
