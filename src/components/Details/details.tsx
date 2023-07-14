@@ -7,7 +7,45 @@ import { Link } from "react-router-dom"
 const Details = () => {
     const [open, setOpen] = useState(false)
     const [toggle, setToggle] = useState(true)
-    console.log(open)
+    const [amount, setAmount] = useState('')
+    const [month, setMonth] = useState('')
+    const [carburant, setCaburant] = useState('')
+    const [marque, setMarque] = useState('')
+    const [model, setModel] = useState('')
+    const [type, setType] = useState('')
+    const [years, setYears] = useState('')
+    const handleChange = (e) => {
+        if (e.target.name == "amount") {
+            setAmount(e.target.value)
+        } else if (e.target.name == "month") {
+            setMonth(e.target.value)
+        } else if (e.target.name == "carburant") {
+            setCaburant(e.target.value)
+        }else if (e.target.name == "marque") {
+            setMarque(e.target.value)
+        }else if (e.target.name == "model") {
+            setModel(e.target.value)
+        }
+        else if (e.target.name == "type") {
+            setType(e.target.value)
+        }
+        else if (e.target.name == "years") {
+            setYears(e.target.value)
+        }
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(years, 'years')
+        console.log("Form is Submitted")
+        setAmount('');
+        setMonth('');
+        setCaburant('')
+        setMarque('')
+        setModel('')
+        setYears('')
+        setType('')
+    }
+    // console.log(open)
     let FormatToday = moment(new Date()).format("MM-YYYY");
     const handleClick = () => {
         setOpen(!open)
@@ -33,17 +71,18 @@ const Details = () => {
                         <hr className='horizontal-line' />
                     </h2>
 
-                    <form className='needs-validation'>
-                        <div className="row mb-3 p1">
+                    <form className='needs-validation' onSubmit={handleSubmit}>
+                        {/* <div className="row mb-3 p1">
                             <div className="col-sm-1 c1">Name</div>
                             <div className='col-sm-1 c2 d-flex justify-content-end '>
                                 <div className="  c3">Name</div>
                             </div>
-                        </div>
+                        </div> */}
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-7"> Carburant </div>
                             {toggle ?
-                                <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
+                                <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='carburant' value={carburant} onChange={handleChange} >
+                                    <option value="" disabled >Sélectionnez</option>
                                     {
                                         Vehicle_Details.Fuels
                                             .length > 0 &&
@@ -64,7 +103,8 @@ const Details = () => {
 
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-12"> Marque </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='marque' value={marque} onChange={handleChange}  >
+                                <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -84,7 +124,8 @@ const Details = () => {
                         </div>
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-12"> Modéle </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='model' value={model} onChange={handleChange}  >
+                                    <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -104,7 +145,8 @@ const Details = () => {
                         </div>
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Type </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='type' value={type} onChange={handleChange}  >
+                                    <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -144,7 +186,7 @@ const Details = () => {
                             : <></>}
                         {toggle ? <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Première immatriculation </div>
-                            <select className="form-select form-select-sm col-lg-5 col-md-5 years col-sm-12" id="cars" required>
+                            <select className="form-select form-select-sm col-lg-5 col-md-5 years col-sm-12" id="cars" required name='years' value={years} onChange={handleChange}  >
                                 {
                                     Vehicle_Details.Years
                                         .length > 0 &&
@@ -173,7 +215,7 @@ const Details = () => {
 
                             <div className="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-sm-start justify-content-md-end ">
                                 <span className='euro mr-5 pr-5'>&euro;</span>
-                                <input type="number" min="2000" max='157300' className='form-control dropdown amount' placeholder='0,00' />
+                                <input type="number" min="2000" max='157300' className='form-control dropdown amount' name='amount' value={amount} onChange={handleChange} placeholder='0,00' />
                                 <div className="invalid-feedback">
                                     Please choose a Valid Amount.
                                 </div>
@@ -182,7 +224,7 @@ const Details = () => {
                         < div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Date d’achat de votre voiture</div>
                             <div className='col-lg-5 col-md-5 d-flex justify-content-sm-start justify-content-md-end'>
-                                <input type="month" className='month dropdown ' placeholder='mm/aaaa' min={FormatToday} max={FormatToday} required />
+                                <input type="month" className='month dropdown ' placeholder='mm/aaaa' name='month' value={month} onChange={handleChange} required />
                             </div>
 
                         </div>
