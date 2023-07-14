@@ -8,15 +8,16 @@ const Home = () => {
         <img src={contenthome} className="content-home" />
       </div> */}
 
-      <div className="row text-start content-home fluid-container position-relative">
+      <div className="row text-start content-home position-relative">
         <img src={contenthome} />
         <span className="centered">
           {/* Le Groupe RGF: */}
           The RGF Group:
           <h6>
-            {/* <p>le meilluer service et unne </p>
-            <p>protection optimale !</p> */}
-            <p>The best service and optimum protection!</p>
+            {/* <p>le meilluer service et unne </p>  */}
+            <p>The best service and</p>
+            <p>optimum protection !</p>
+            {/* <p>The best service and optimum protection!</p> */}
           </h6>
         </span>
       </div>
@@ -45,12 +46,7 @@ const Home = () => {
             />
           </a>
           <a href="/dashboard" className="nav-link text-white">
-            <img
-              src={habitation}
-              // width="300"
-              // height="500"
-              className="image-size col-md-6 offset-md-2"
-            />
+            <img src={habitation} className="image-size col-md-6 offset-md-2" />
           </a>
         </div>
       </div>

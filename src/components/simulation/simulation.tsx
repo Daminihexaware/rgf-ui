@@ -11,9 +11,11 @@ const VehicleSimulation = () => {
     setOpen(!open);
   };
 
-  function handleChange(e: any) {
-    setValue(e.target.value);
-  }
+  const [vNumber, setVnumber] = useState("");
+  const handleChange = (e: any) => {
+    e.preventDefault();
+    setVnumber(e.target.value);
+  };
 
   return (
     <div>
@@ -59,7 +61,7 @@ const VehicleSimulation = () => {
           <div>
             <img src={contenthome} className="content-home" />
           </div>
-          <div className="p-4">
+          <div className="p-3">
             <span className="h4">
               {" "}
               {/* Simulation en ligne */}
@@ -69,45 +71,49 @@ const VehicleSimulation = () => {
           </div>
 
           <div className="p-3">
-            <div className="row p-2">
-              <span className="h6">
+            <div className="row p-2 d-flex flex-column">
+              <div className="h5 col-12">
                 {/* Remplissez votre numero de chassis */}
                 Enter your chassis number
-                <i
-                  className="fa fa-info info-icon"
-                  onClick={handleClick}
-                  aria-hidden="true"
-                >
-                  {" "}
-                </i>
-              </span>
+                <i className="fa fa-info info-icon" onClick={handleClick} aria-hidden="true"> </i>
+              </div>
               <div className="p-2">
                 <input
                   className="form-control vehicleText"
                   type="text"
+                  width="100"
                   placeholder="ABCDEFG1234567890"
-                  value={value}
+                  value={vNumber}
                   onChange={handleChange}
                 />
               </div>
             </div>
           </div>
-
-          <div style={{ float: "right", borderRadius: "4px" }}>
-            <div className="p-2">
-              <button disabled={!value} type="button" className="btn btn-sm">
-                {/* Suivant */}
-                Next
-              </button>
+          <div style={{ float: "right" }}>
+            <div className="p-3 d-flex justify-content-end">
+              <Link to="/Car/YourCarDetails">
+                <button
+                  type="button"
+                  disabled={!vNumber}
+                  className="btn btn-sm p-2"
+                >
+                  {/* Suivant */}
+                  Next
+                </button>
+              </Link>
             </div>
             <div className="p-2">
               <Link
-                to="/details"
-                style={{ width: "200px", background: "lightgreen" }}
-                className="btn btn-md col-3 mb-2 order-1"
+                to="/Car/YourCar"
+                style={{ width: "200px"}}
+                className="btn btn-outline col-3 mb-2 order-1 p-2"
               >
                 Without chassis number
               </Link>
+              {/* <button type="button" className="btn btn-primary">
+            Sans numero de chassis
+            Without chassis number
+          </button> */}
             </div>
           </div>
         </div>

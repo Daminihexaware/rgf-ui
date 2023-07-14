@@ -3,12 +3,13 @@ export const RouteLinks = {
   dashboard: "/dashboard",
   simulation: "/VehicleSimulation",
   habitation: "/habitation",
-  details: '/details'
+  carform: '/Car/YourCar',
+  cardetails: '/Car/YourCarDetails',
 };
 
 export const Vehicle_Details = {
   Fuels: [
-    { label: 'Sélectionnez', value: 'Sélectionnez' },
+    // { label: 'Sélectionnez', value: 'Sélectionnez' },
     { label: 'Essence', value: 'Essence' },
     { label: 'Diesel', value: 'Diesel' },
     { label: 'LPG', value: 'LPG' },
