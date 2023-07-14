@@ -29,6 +29,10 @@
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* //Media Query */
 @media only screen and (max-width: 1024px) {
   .content-home {
@@ -115,7 +119,6 @@
     margin: 0;
   }
   /* .images img {
-    height: 100px;
-    width: 100px;
+    max-width: 100%;
   } */
 }
