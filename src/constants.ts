@@ -3,7 +3,8 @@ export const RouteLinks = {
   dashboard: "/dashboard",
   simulation: "/VehicleSimulation",
   habitation: "/habitation",
-  details: '/details'
+  carform: '/Car/YourCar',
+  cardetails: '/Car/YourCarDetails',
 };
 
 export const Vehicle_Details = {

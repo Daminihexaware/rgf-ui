@@ -1,7 +1,7 @@
 import './details.css'
 import { Vehicle_Details } from '../../constants';
 import moment from "moment";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 
 const Details = () => {
@@ -21,9 +21,9 @@ const Details = () => {
             setMonth(e.target.value)
         } else if (e.target.name == "carburant") {
             setCaburant(e.target.value)
-        }else if (e.target.name == "marque") {
+        } else if (e.target.name == "marque") {
             setMarque(e.target.value)
-        }else if (e.target.name == "model") {
+        } else if (e.target.name == "model") {
             setModel(e.target.value)
         }
         else if (e.target.name == "type") {
@@ -50,6 +50,16 @@ const Details = () => {
     const handleClick = () => {
         setOpen(!open)
     }
+    useEffect(() => {
+        console.log(window.location.pathname, 'path')
+        if (window.location.pathname === "/Car/YourCarDetails") {
+            setToggle(false)
+        }
+        if (window.location.pathname === "/Car/YourCar") {
+            setToggle(true)
+        }
+    }, [])
+
     return (
         <div className='container'>
             <div className='d-flex justify-content-center align-items-center pb-8'>
@@ -62,7 +72,7 @@ const Details = () => {
                     <p>Si vous n'avez plus ces documents, vous pouvez vérifier vos relevés de compte pour retrouver le montant et la date de paiement.</p>
                 </div>
                 <div className={open ? 'details-info-blur' : 'details-info'}>
-                    <Link to="/">
+                    <Link to="/VehicleSimulation">
                         <button className='back-button'>
                             <i className="fa fa-chevron-left" aria-hidden="true"></i>
                             Retour</button>
@@ -125,7 +135,7 @@ const Details = () => {
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7 col-sm-12"> Modéle </div>
                             {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='model' value={model} onChange={handleChange}  >
-                                    <option value="" disabled >Sélectionnez</option>
+                                <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -146,7 +156,7 @@ const Details = () => {
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Type </div>
                             {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" required name='type' value={type} onChange={handleChange}  >
-                                    <option value="" disabled >Sélectionnez</option>
+                                <option value="" disabled >Sélectionnez</option>
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
