@@ -45,7 +45,7 @@ const Home = () => {
               className="image-size col-md-6"
             />
           </a>
-          <a href="/dashboard" className="nav-link text-white">
+          <a href="/" className="nav-link text-white">
             <img src={habitation} className="image-size col-md-6 offset-md-2" />
           </a>
         </div>

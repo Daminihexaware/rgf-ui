@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="p-4">
       <nav className="navbar navbar-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img
             src={headerlogo}
             alt="Bootstrap"
