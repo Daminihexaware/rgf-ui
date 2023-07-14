@@ -60,9 +60,8 @@ const VehicleHabitation = () => {
           <div className="row">
             <img className="col-3 p-2 order-1 iconSize" src={mail} />
             <span className="h6 text-white text-center col-6 p-0 order-1">
-              {/* Composez votre assurance habitation ideale */}
-              Compose your ideal home insurance I would like to receive more
-              information
+              {/* Composez votre assurance habitation ideale */}I would like to
+              receive more information
             </span>
             <Link
               to="/VehicleSimulation"
