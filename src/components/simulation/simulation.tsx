@@ -75,7 +75,13 @@ const VehicleSimulation = () => {
               <div className="h5 col-12">
                 {/* Remplissez votre numero de chassis */}
                 Enter your chassis number
-                <i className="fa fa-info info-icon" onClick={handleClick} aria-hidden="true"> </i>
+                <i
+                  className="fa fa-info info-icon"
+                  onClick={handleClick}
+                  aria-hidden="true"
+                >
+                  {" "}
+                </i>
               </div>
               <div className="p-2">
                 <input
@@ -91,7 +97,19 @@ const VehicleSimulation = () => {
           </div>
           <div style={{ float: "right" }}>
             <div className="p-3 d-flex justify-content-end">
-              <Link to="/Car/YourCarDetails">
+              {vNumber ? (
+                <>
+                  <Link to="/Car/YourCarDetails">
+                    <button
+                      type="button"
+                      disabled={!vNumber}
+                      className="btn btn-sm p-2"
+                    >
+                      Next
+                    </button>
+                  </Link>
+                </>
+              ) : (
                 <button
                   type="button"
                   disabled={!vNumber}
@@ -100,12 +118,12 @@ const VehicleSimulation = () => {
                   {/* Suivant */}
                   Next
                 </button>
-              </Link>
+              )}
             </div>
             <div className="p-2">
               <Link
                 to="/Car/YourCar"
-                style={{ width: "200px"}}
+                style={{ width: "200px" }}
                 className="btn btn-outline col-3 mb-2 order-1 p-2"
               >
                 Without chassis number
