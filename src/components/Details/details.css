@@ -26,7 +26,7 @@
     font-size: 2rem;
     color: #00ad73;
     cursor: pointer;
-    margin-left: 22rem;
+    margin-left: 15rem;
 }
 .info-icon{
     position:relative;
@@ -47,11 +47,11 @@
 }
 /* Popup */
 .popup{
-    position: absolute;
-    left:27%;
+    position: fixed;
+    left:36%;
     top:26%;
     display: block;
-    width: 24rem;
+    width: 21rem;
     /* height: 12rem;  */
     /* background-color: rgb(145, 50, 50); */
     padding:1rem 3rem;
@@ -71,17 +71,13 @@
  width: 40%;
 }
 
-.years{
-    width:5.5rem;
-    outline: none;
-}
 .info-label{
     /* position:absolute; */
     margin-bottom: 0.5rem;
     /* background-color: #d876b2; */
 }
 
-.details-button{
+.submit-button{
     display: flex;
     flex-direction: row-reverse;
     /* margin-right: 2rem; */
@@ -103,7 +99,7 @@
 .month, .amount {
     width: 6rem !important;
 }
-.amount, .month{
+.amount, .month, .years{
     height: 1.7rem;
 }
 .dropdown{
@@ -126,12 +122,12 @@ select:focus{
         width: 42%;
     }
     .popup{
-        left:30%;
+        left:32%;
         top:24%;
-        width: 23rem;
+        width: 21rem;
     }
     .fa-times-circle{
-        margin-left: 16rem;
+        margin-left: 15rem;
         font-size: 1.8rem;
     }
 }
@@ -147,5 +143,43 @@ select:focus{
     .fa-times-circle{
         margin-left: 15rem;
         font-size: 1.6rem;
+    }
+    .horizontal-line{
+        width:5.5rem;
+    }
+}
+@media only screen and (max-width: 576px){
+    .details-info{
+        width: 90%;
+    }
+    
+   .form-select{
+      width: 100% !important;
+   }
+    .popup{
+        left:10%;
+        top:24%;
+        width: 21rem;
+    }
+    .fa-times-circle{
+        margin-left: 15rem;
+        font-size: 1.6rem;
+    }
+    .row > div {
+        padding-left: 0 !important;
+        /* width: 50%; */
+    }
+    .month, .amount {
+        width: 12rem !important;
+    }
+    .submit-button{
+        display: flex;
+        flex-direction: row;
+    }
+    .detail-row > div, .detail-row > span{
+        width: 50% !important;
+    }
+    .horizontal-line{
+        width:4.8rem;
     }
 }
