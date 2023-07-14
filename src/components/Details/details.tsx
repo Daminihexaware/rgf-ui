@@ -33,17 +33,17 @@ const Details = () => {
                         <hr className='horizontal-line' />
                     </h2>
 
-                    <form>
+                    <form className='needs-validation'>
                         <div className="row mb-3 p1">
-                            <div className="col-lg-6 c1">Name</div>
-                            <div className='col-lg-6 c2 d-flex justify-content-end '>
+                            <div className="col-sm-1 c1">Name</div>
+                            <div className='col-sm-1 c2 d-flex justify-content-end '>
                                 <div className="  c3">Name</div>
                             </div>
                         </div>
                         <div className='row mb-3' >
-                            <div className="col-lg-7 col-md-7"> Carburant </div>
+                            <div className="col-lg-7 col-md-7 col-sm-7"> Carburant </div>
                             {toggle ?
-                                <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                                <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
                                     {
                                         Vehicle_Details.Fuels
                                             .length > 0 &&
@@ -59,12 +59,12 @@ const Details = () => {
                                             }
                                         )}
                                 </select>
-                                : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> Esscence </span>}
+                                : <span className="col-lg-5 col-md-5 col-sm-5 d-flex justify-content-end fw-semibold"> Esscence </span>}
                         </div>
 
                         <div className='row mb-3' >
-                            <div className="col-lg-7 col-md-7"> Marque </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                            <div className="col-lg-7 col-md-7 col-sm-12"> Marque </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -83,8 +83,8 @@ const Details = () => {
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> Volkswagen </span>}
                         </div>
                         <div className='row mb-3' >
-                            <div className="col-lg-7 col-md-7"> Modéle </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                            <div className="col-lg-7 col-md-7 col-sm-12"> Modéle </div>
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -104,7 +104,7 @@ const Details = () => {
                         </div>
                         <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Type </div>
-                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                            {toggle ? <select className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12" id="fuels" >
                                 {
                                     Vehicle_Details.Fuels
                                         .length > 0 &&
@@ -122,29 +122,29 @@ const Details = () => {
                             </select>
                                 : <span className="col-lg-5 col-md-5 d-flex justify-content-end fw-semibold"> tsi 110 </span>}
                         </div>
-                        {toggle ? <></>
-                            : <div className='row mb-3' >
-                                <div className="col-lg-7 col-md-7"> Annee de construction </div>
-                                <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
-                                    {
-                                        Vehicle_Details.Fuels
-                                            .length > 0 &&
-                                        Vehicle_Details.Fuels?.map(
-                                            (item, index) => {
-                                                return (
-                                                    <option
-                                                        key={index}
-                                                        value={item.value} >
-                                                        {item.label}
-                                                    </option>
-                                                )
-                                            }
-                                        )}
-                                </select>
-                            </div>}
+                        {!toggle ? <div className='row mb-3' >
+                            <div className="col-lg-7 col-md-7"> Annee de construction </div>
+                            <select className="form-select form-select-sm col-lg-5 col-md-5" id="fuels" >
+                                {
+                                    Vehicle_Details.Fuels
+                                        .length > 0 &&
+                                    Vehicle_Details.Fuels?.map(
+                                        (item, index) => {
+                                            return (
+                                                <option
+                                                    key={index}
+                                                    value={item.value} >
+                                                    {item.label}
+                                                </option>
+                                            )
+                                        }
+                                    )}
+                            </select>
+                        </div>
+                            : <></>}
                         {toggle ? <div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Première immatriculation </div>
-                            <select className="form-select form-select-sm col-lg-5 col-md-5" id="cars" required>
+                            <select className="form-select form-select-sm col-lg-5 col-md-5 years col-sm-12" id="cars" required>
                                 {
                                     Vehicle_Details.Years
                                         .length > 0 &&
@@ -163,7 +163,7 @@ const Details = () => {
                         </div>
                             : <></>}
                         <div className='row mb-3' >
-                            <div className='info-label col-lg-8 col-md-8'>
+                            <div className='info-label col-lg-8 col-md-8 col-sm-8'>
                                 <div>
                                     Valeur facture(tvac)
                                     <i className="fa fa-info info-icon" onClick={handleClick} aria-hidden="true"> </i>
@@ -171,19 +171,22 @@ const Details = () => {
                                 <span> remises comprises (hors reprise) </span>
                             </div>
 
-                            <div className="col-lg-4 col-md-4 d-flex justify-content-end">
+                            <div className="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-sm-start justify-content-md-end ">
                                 <span className='euro mr-5 pr-5'>&euro;</span>
-                                <input type="number" min="2000" max='157300' className='amount dropdown ' placeholder='0,00' />
+                                <input type="number" min="2000" max='157300' className='form-control dropdown amount' placeholder='0,00' />
+                                <div className="invalid-feedback">
+                                    Please choose a Valid Amount.
+                                </div>
                             </div>
                         </div>
                         < div className='row mb-3' >
                             <div className="col-lg-7 col-md-7"> Date d’achat de votre voiture</div>
-                            <div className='col-lg-5 col-md-5 d-flex justify-content-end'>
+                            <div className='col-lg-5 col-md-5 d-flex justify-content-sm-start justify-content-md-end'>
                                 <input type="month" className='month dropdown ' placeholder='mm/aaaa' min={FormatToday} max={FormatToday} required />
                             </div>
 
                         </div>
-                        <div className="details-button" >
+                        <div className="submit-button" >
                             <button type="submit" className='btn btn-sm'>Suivant</button>
                         </div>
                     </form>
