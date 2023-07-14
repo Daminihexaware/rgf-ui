@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 const VehicleHabitation = () => {
   return (
-    <div>
+    <div className="pb-5">
       <div>
         <img src={habitationImg} className="content-home" />
       </div>
@@ -20,7 +20,7 @@ const VehicleHabitation = () => {
         </span>
       </div>
 
-      <div className="container bgColor p-5">
+      <div className="container bgColor p-4">
         <div className="row p-2">
           <span className="h5 text-white">
             Compose your ideal home insurance policy
@@ -28,67 +28,52 @@ const VehicleHabitation = () => {
             {/* Composez votre assurance habitation ideale */}
           </span>
         </div>
-        <div className="row d-flex align-items-center justify-content-center p-5">
-          <div className="row">
-            <div className="col-2">
+        <div className="row d-flex align-items-center justify-content-center py-2">
+          <div className="row px-0 d-flex align-items-center">
+            <div className="col-md-8 col-xs-12 d-flex align-items-center">
               <img className="p-2 iconSize" src={calculation} />
-            </div>
-            <div className="col-6">
-              <span className="h6 text-white text-center p-2">
+              <div className="h6 text-white text-size">
                 {/* Je prends rendez-vous avec un conseiller */}I make an online
                 simulation
-              </span>
+              </div>
             </div>
-            <div className="col-4">
-              <Link
-                to="/VehicleSimulation"
-                style={{ width: "210px" }}
-                className="btn btn-sm mb-2"
-              >
+            <div className="col-md-4 col-xs-12 mb-2 d-flex justify-content-end">
+              <Link to="/VehicleSimulation" className="btn btn-sm p-2 btn-size">
                 Simulation
               </Link>
             </div>
           </div>
-          <div className="row">
-            <div className="col-2">
+          <div className="row px-0 d-flex align-items-center">
+            <div className="col-md-8 col-xs-12 d-flex align-items-center">
               <img className="p-2 iconSize" src={calendar} />
-            </div>
-            <div className="col-6">
-              <span className="h6 text-white text-center p-2">
+              <div className="h6 text-white text-size">
                 {/* Je souhaite recevoir plus d informations */}Make an
                 appointment with a consultant
-              </span>
+              </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-xs-12 mb-2 d-flex justify-content-end">
               <Link
                 to="/VehicleSimulation"
-                style={{ width: "210px", backgroundColor: "orange !important" }}
-                className="btn btn-sm col-3 mb-2"
+                className="btn btn-sm col-3 btn-orange p-2 btn-size"
               >
                 Rendez-vous
               </Link>
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-2">
+          <div className="row px-0 d-flex align-items-center">
+            <div className="col-md-8 col-xs-12 d-flex align-items-center">
               <img className="p-2 iconSize" src={mail} />
-            </div>
-            <div className="col-6">
-              <span className="h6 text-white text-center col-6 p-2">
+              <div className="h6 text-white col-6 text-size">
                 {/* Composez votre assurance habitation ideale */}
                 Compose your ideal home insurance I would like to receive more
                 information
-              </span>
+              </div>
             </div>
-            <div className="col-4">
+            <div className="col-md-4 col-xs-12 mb-2 d-flex justify-content-end">
               <Link
                 to="/VehicleSimulation"
-                style={{
-                  width: "210px",
-                  backgroundColor: "skyblue !important",
-                }}
-                className="btn btn-sm mb-2 iconSize"
+                className="btn btn-sm iconSize btn-blue p-2 btn-size"
               >
                 Contact
               </Link>
