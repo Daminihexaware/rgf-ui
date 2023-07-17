@@ -59,7 +59,7 @@ const Details = () => {
   }, []);
 
   return (
-    <div className="container pb-5">
+    <div className="container">
       <div className="d-flex justify-content-center align-items-center pb-8">
         {/* details-page */}
 
@@ -281,11 +281,11 @@ const Details = () => {
             ) : (
               <></>
             )}
-            <div className="detail-row row mb-3 d-flex flex-column flex-sm-column flex-md-row">
-              <div className="info-label col-lg-8 col-md-8 col-sm-12">
-                <div className='info-div'>
+            <div className="detail-row row mb-3">
+              <div className="info-label col-lg-8 col-md-8 col-sm-8">
+                <div>
                   {/* Valeur facture(tvac) */}
-                  <span className="info-span">Invoice value(incl. VAT)</span>
+                  Invoice value(incl. VAT)
                   <i
                     className="fa fa-info info-icon"
                     onClick={handleClick}
@@ -294,7 +294,7 @@ const Details = () => {
                     {" "}
                   </i>
                 </div>
-                <span className='info-span2'>
+                <span>
                   {/* remises comprises (hors reprise)  */}
                   including discounts (excluding trade-in)
                 </span>
@@ -317,7 +317,7 @@ const Details = () => {
                 </div>
               </div>
             </div>
-            <div className="detail-row row mb-3 d-flex flex-column flex-sm-column flex-md-row">
+            <div className="detail-row row mb-3">
               <div className="col-lg-7 col-md-7">
                 {" "}
                 {/* Date d’achat de votre voiture */}
