@@ -19,7 +19,7 @@ const VehicleSimulation = () => {
 
   return (
     <div>
-      <div className="container">
+      <div>
         <div className={open ? "popup" : "popup-hide"}>
           <i
             className="fa fa-times-circle"
@@ -61,7 +61,7 @@ const VehicleSimulation = () => {
           <div>
             <img src={policybanner} className="content-home" />
           </div>
-          <div className="p-3">
+          <div className="p-3 container">
             <span className="h4">
               {" "}
               {/* Simulation en ligne */}
@@ -70,7 +70,7 @@ const VehicleSimulation = () => {
             <hr className="horizontal-line" />
           </div>
 
-          <div className="p-3">
+          <div className="p-3 container">
             <div className="row p-2 d-flex flex-column">
               <div className="h5 col-12">
                 {/* Remplissez votre numero de chassis */}
