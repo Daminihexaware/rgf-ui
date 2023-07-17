@@ -1,5 +1,5 @@
 import "./simulation.css";
-import { contenthome } from "../../assets/images";
+import { policybanner } from "../../assets/images";
 import { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -59,7 +59,7 @@ const VehicleSimulation = () => {
         </div>
         <div className={open ? "simulation-info-blur" : "simulation-info"}>
           <div>
-            <img src={contenthome} className="content-home" />
+            <img src={policybanner} className="content-home" />
           </div>
           <div className="p-3">
             <span className="h4">
