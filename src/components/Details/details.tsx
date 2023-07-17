@@ -285,15 +285,18 @@ const Details = () => {
               <div className="info-label col-lg-8 col-md-8 col-sm-12">
                 <div className='info-div'>
                   {/* Valeur facture(tvac) */}
-                  <span className="info-span">Invoice value(incl. VAT)</span>
-                  <i
-                    className="fa fa-info info-icon"
-                    onClick={handleClick}
-                    aria-hidden="true"
-                  >
-                    {" "}
-                  </i>
+                  <span className="info-span">Invoice value(incl. VAT)
+                    <i
+                      className="fa fa-info info-icon"
+                      onClick={handleClick}
+                      aria-hidden="true"
+                    >
+                      {" "}
+                    </i>
+                  </span>
+
                 </div>
+
                 <span className='info-span2'>
                   {/* remises comprises (hors reprise)  */}
                   including discounts (excluding trade-in)
