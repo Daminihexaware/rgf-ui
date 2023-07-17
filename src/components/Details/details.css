@@ -102,6 +102,9 @@
 .amount, .month, .years{
     height: 1.7rem;
 }
+.amount{
+    margin-left: 10px;
+}
 .dropdown{
     outline: none;
     border: 1px solid #ccc;
@@ -133,7 +136,10 @@ select:focus{
 }
 @media only screen and (max-width: 768px){
     .details-info{
-        width: 40%;
+        width: 44%;
+    }
+    .amount{
+        margin-left: 5px;
     }
     .popup1{
         left:28%;
@@ -147,6 +153,10 @@ select:focus{
     .horizontal-line{
         width:5.5rem;
     }
+    /* .info-span{
+        display: inline-block;
+        width: 7rem;
+    } */
 }
 @media only screen and (max-width: 576px){
     .details-info{
@@ -183,10 +193,31 @@ select:focus{
         width:4.8rem;
     }
 }
+@media only screen and (max-width: 425px){
+    .info-span{
+        display: inline-block;
+        width: 10rem;
+    }
+    
+}
+
+@media only screen and (max-width: 375px){
+    .info-icon {
+        position: relative;
+        right: -166px;
+        top: -32px;
+    }
+    .info-div{
+        height: 1.5rem;
+    }
+    .info-span2{
+        display: inline-block;
+         width: 9rem;
+    }
+}
 @media only screen and (max-width: 320px){
     .popup1{
         left:0%;
         padding:1rem 2rem;
-
     }
 }
