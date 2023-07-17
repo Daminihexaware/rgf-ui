@@ -45,7 +45,7 @@
   padding-left: 1.6rem;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 2600px) {
   .mobile-devices {
     display: none !important;
   }
