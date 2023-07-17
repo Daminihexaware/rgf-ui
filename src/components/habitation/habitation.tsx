@@ -40,11 +40,11 @@ const VehicleHabitation = () => {
               </Link>
             </div>
             {/* !---Mobile devices---! */}
-            <div className="col-2 align-items-center mobile-devices">
-              <img className="p-2 iconSize" src={calculation} />
+            <div className="col-2 mb-4 align-items-center mobile-devices">
+              <img className="iconSize" src={calculation} />
             </div>
-            <div className="col-10 flex-column mobile-devices">
-              <div className="h6 text-white">
+            <div className="col-10 mb-4 flex-column mobile-devices">
+              <div className="h6 text-white text-size">
                 {/* Je prends rendez-vous avec un conseiller */}I make an online
                 simulation
               </div>
@@ -71,11 +71,11 @@ const VehicleHabitation = () => {
               </Link>
             </div>
             {/* !---Mobile devices---! */}
-            <div className="col-2 align-items-center mobile-devices">
-              <img className="p-2 iconSize" src={calendar} />
+            <div className="col-2 mb-4 align-items-center mobile-devices">
+              <img className="iconSize" src={calendar} />
             </div>
-            <div className="col-10 flex-column mobile-devices">
-              <div className="h6 text-white">
+            <div className="col-10 mb-4 flex-column mobile-devices">
+              <div className="h6 text-white text-size">
                 {/* Je prends rendez-vous avec un conseiller */}Make an
                 appointment with a consultant
               </div>
@@ -103,11 +103,11 @@ const VehicleHabitation = () => {
               </Link>
             </div>
             {/* !---Mobile devices---! */}
-            <div className="col-2 align-items-center mobile-devices">
-              <img className="p-2 iconSize" src={mail} />
+            <div className="col-2 mb-4 align-items-center mobile-devices">
+              <img className="iconSize" src={mail} />
             </div>
-            <div className="col-10 flex-column mobile-devices">
-              <div className="h6 text-white">
+            <div className="col-10 mb-4 flex-column mobile-devices">
+              <div className="h6 text-white text-size">
                 {/* Je prends rendez-vous avec un conseiller */}I would like to
                 receive more information
               </div>
