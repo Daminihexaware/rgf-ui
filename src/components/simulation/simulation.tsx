@@ -19,7 +19,7 @@ const VehicleSimulation = () => {
 
   return (
     <div>
-      <div>
+      <div className="container">
         <div className={open ? "popup" : "popup-hide"}>
           <i
             className="fa fa-times-circle"
