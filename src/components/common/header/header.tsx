@@ -3,7 +3,7 @@ import { headerlogo, nngroup } from "../../../assets/images";
 
 const Header = () => {
   return (
-    <div className="p-4">
+    <div className="container">
       <nav className="navbar navbar-light">
         <a className="navbar-brand" href="/">
           <img
