@@ -45,7 +45,7 @@
   padding-left: 1.6rem;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 2600px) {
   .mobile-devices {
     display: none !important;
   }
@@ -62,6 +62,13 @@
   .desktop-devices {
     display: none !important;
   }
+
+  .btn-size {
+    min-width: 145px !important;
+    width: 145px !important;
+    margin-left: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 576px) {
@@ -71,6 +78,13 @@
   .desktop-devices {
     display: none !important;
   }
+
+  .btn-size {
+    min-width: 145px !important;
+    width: 145px !important;
+    margin-left: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 320px) {
@@ -79,5 +93,11 @@
   }
   .desktop-devices {
     display: none !important;
+  }
+
+  .btn-size {
+    min-width: 145px !important;
+    width: 145px !important;
+    margin-left: 30px;
   }
 }
