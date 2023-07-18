@@ -3,7 +3,6 @@ import { policybanner } from "../../assets/images";
 import { useState } from "react";
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "../Buttons/button";
 
 const VehicleSimulation = () => {
   const [open, setOpen] = useState(false);
@@ -111,19 +110,14 @@ const VehicleSimulation = () => {
                   </Link>
                 </>
               ) : (
-                <Button disabled={!vNumber} className="btn btn-sm p-2">
-                  {" "}
+                <button
+                  type="button"
+                  disabled={!vNumber}
+                  className="btn btn-sm p-2"
+                >
                   {/* Suivant */}
                   Next
-                </Button>
-                // <button
-                //   type="button"
-                //   disabled={!vNumber}
-                //   className="btn btn-sm p-2"
-                // >
-                //   {/* Suivant */}
-                //   Next
-                // </button>
+                </button>
               )}
             </div>
             <div className="p-2">

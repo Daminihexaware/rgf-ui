@@ -16,7 +16,7 @@ const Header = () => {
           />
         </a>
         <div className="my-2 my-2 my-sm-0 text-end">
-          <span className="h4 row">Courtier en assurance</span>
+          <span className="h4 row d-inline">Courtier en assurance</span>
           <div className="row">
             <div className="col">
               <span>supporte par</span>
