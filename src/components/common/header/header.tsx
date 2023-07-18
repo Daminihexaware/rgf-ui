@@ -4,7 +4,7 @@ import { headerlogo, nngroup } from "../../../assets/images";
 const Header = () => {
   return (
     // <div className="container w-50">
-    <div className="container mx-auto" style={{ width: "470px" }}>
+    <div className="container mx-auto">
       <nav className="navbar navbar-light">
         <a className="navbar-brand" href="/">
           <img
