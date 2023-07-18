@@ -24,7 +24,7 @@ const Home = () => {
               Click on your insurance to simulate your premium
             </span>
           </div>
-          <div className="d-flex justify-content-center p-5 mr-2">
+          <div className="d-flex justify-content-center p-4">
             <a href="habitation" className="nav-link text-white">
               <img
                 src={assurance_auto}
