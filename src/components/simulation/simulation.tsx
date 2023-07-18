@@ -72,7 +72,7 @@ const VehicleSimulation = () => {
 
           <div className="p-3 container">
             <div className="row p-2 d-flex flex-column">
-              <div className="h5 col-12">
+              <div className="h5 col-12 info-span">
                 {/* Remplissez votre numero de chassis */}
                 Enter your chassis number
                 <i
