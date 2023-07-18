@@ -8,7 +8,12 @@
    padding-bottom: 5rem;
    /* background-color: violet; */
 }
-
+h5{
+    margin-bottom: 2rem !important;
+}
+form{
+    margin-left: 1rem;
+}
 /* buttons */
 .back-button{
     background-color: transparent;

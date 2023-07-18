@@ -3,6 +3,7 @@ import { Vehicle_Details } from "../../constants";
 import moment from "moment";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "../common/dropdown/dropdown";
 
 const Details = () => {
   const [open, setOpen] = useState(false);
@@ -93,19 +94,21 @@ const Details = () => {
               Back
             </button>
           </Link>
-          <h2>
+          <h5>
             {/* Votre voiture */}
             Your Car :
             <hr className="horizontal-line" />
-          </h2>
+          </h5>
 
-          <form className="needs-validation" onSubmit={handleSubmit}>
+          <form className="needs-validation ml-2" onSubmit={handleSubmit}>
             {/* <div className="row mb-3 p1">
                             <div className="col-sm-1 c1">Name</div>
                             <div className='col-sm-1 c2 d-flex justify-content-end '>
                                 <div className="  c3">Name</div>
                             </div>
                         </div> */}
+            {/* <Dropdown /> */}
+
             <div className="detail-row row mb-3">
               <div className="col-lg-7 col-md-7 col-sm-7">
                 {/* Carburant  */}Fuel
