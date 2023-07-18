@@ -28,10 +28,12 @@
     cursor: pointer;
     margin-left: 15rem;
 }
-.info-icon{
+.info-span{
     position:relative;
-    right: -4px;
-    top:-8px
+}
+.info-icon{
+    position:absolute;
+    top:-8px; 
 }
 .fa-info{
     font-size: 1.2rem;
@@ -202,11 +204,11 @@ select:focus{
 }
 
 @media only screen and (max-width: 375px){
-    .info-icon {
+    /* .info-icon {
         position: relative;
         right: -166px;
         top: -32px;
-    }
+    } */
     .info-div{
         height: 1.5rem;
     }
