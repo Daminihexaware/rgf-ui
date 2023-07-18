@@ -8,11 +8,21 @@
    padding-bottom: 5rem;
    /* background-color: violet; */
 }
+.label-info{
+    /* color: #00ad73; */
+    font-size: 0.98rem;
+}
 h5{
     margin-bottom: 2rem !important;
 }
 form{
     margin-left: 1rem;
+}
+img{
+    margin-bottom: 1rem;
+}
+.car-info{
+    margin: 0 1rem;
 }
 /* buttons */
 .back-button{
@@ -47,7 +57,7 @@ form{
     cursor:pointer;
 }
 .horizontal-line{
-    width:6rem;
+    width:3.5rem !important;
     height:0.18rem;
     color:#00ad73;
     background-color: #00ad73;
@@ -76,7 +86,7 @@ form{
 }
 .details-info{
  /* background-color: orange; */
- width: 40%;
+ width: 43%;
 }
 
 .info-label{
@@ -200,6 +210,12 @@ select:focus{
     .horizontal-line{
         width:4.8rem;
     }
+    .car-info{
+        margin: 0;
+    }
+    form{
+        margin-left: 0rem;
+    }
 }
 @media only screen and (max-width: 425px){
     .info-span{
@@ -216,7 +232,7 @@ select:focus{
         top: -32px;
     } */
     .info-div{
-        height: 1.5rem;
+        height: 1rem;
     }
     .info-span2{
         display: inline-block;

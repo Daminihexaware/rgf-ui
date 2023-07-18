@@ -4,6 +4,7 @@ import moment from "moment";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../common/dropdown/dropdown";
+import { policybanner } from "../../assets/images";
 
 const Details = () => {
   const [open, setOpen] = useState(false);
@@ -87,20 +88,25 @@ const Details = () => {
           </p>
         </div>
         <div className={open ? "details-info-blur" : "details-info"}>
-          <Link to="/VehicleSimulation">
+          <div>
+            <img src={policybanner} className="content-home" />
+          </div>
+
+          <div className='car-info'>
+           <Link to="/VehicleSimulation">
             <button className="back-button">
               <i className="fa fa-chevron-left" aria-hidden="true"></i>
               {/* Retour */}
               Back
             </button>
-          </Link>
-          <h5>
+           </Link>
+           <h5>
             {/* Votre voiture */}
             Your Car :
             <hr className="horizontal-line" />
-          </h5>
+           </h5>
 
-          <form className="needs-validation ml-2" onSubmit={handleSubmit}>
+           <form className="needs-validation" onSubmit={handleSubmit}>
             {/* <div className="row mb-3 p1">
                             <div className="col-sm-1 c1">Name</div>
                             <div className='col-sm-1 c2 d-flex justify-content-end '>
@@ -110,7 +116,7 @@ const Details = () => {
             {/* <Dropdown /> */}
 
             <div className="detail-row row mb-3">
-              <div className="col-lg-7 col-md-7 col-sm-7">
+              <div className="col-lg-7 col-md-7 col-sm-7 label-info">
                 {/* Carburant  */}Fuel
               </div>
               {toggle ? (
@@ -143,7 +149,7 @@ const Details = () => {
             </div>
 
             <div className="detail-row row mb-3">
-              <div className="col-lg-7 col-md-7 col-sm-12">
+              <div className="col-lg-7 col-md-7 col-sm-12 label-info">
                 {/* Marque */}Brand
               </div>
               {toggle ? (
@@ -175,7 +181,7 @@ const Details = () => {
               )}
             </div>
             <div className="detail-row row mb-3">
-              <div className="col-lg-7 col-md-7 col-sm-12">
+              <div className="col-lg-7 col-md-7 col-sm-12 label-info">
                 {/* Modéle */} Model
               </div>
               {toggle ? (
@@ -207,7 +213,7 @@ const Details = () => {
               )}
             </div>
             <div className="detail-row row mb-3">
-              <div className="col-lg-7 col-md-7"> Type </div>
+              <div className="col-lg-7 col-md-7 label-info"> Type </div>
               {toggle ? (
                 <select
                   className="form-select form-select-sm col-lg-5 col-md-5 col-sm-12"
@@ -238,7 +244,7 @@ const Details = () => {
             </div>
             {!toggle ? (
               <div className="detail-row row mb-3">
-                <div className="col-lg-7 col-md-7"> Annee de construction </div>
+                <div className="col-lg-7 col-md-7 label-info"> Annee de construction </div>
                 <select
                   className="form-select form-select-sm col-lg-5 col-md-5"
                   id="fuels"
@@ -258,7 +264,7 @@ const Details = () => {
             )}
             {toggle ? (
               <div className="row mb-3">
-                <div className="col-lg-7 col-md-7">
+                <div className="col-lg-7 col-md-7 label-info">
                   {" "}
                   {/* Première immatriculation */}
                   Initial registration{" "}
@@ -288,7 +294,7 @@ const Details = () => {
               <div className="info-label col-lg-8 col-md-8 col-sm-12">
                 <div className='info-div'>
                   {/* Valeur facture(tvac) */}
-                  <span className="info-span">Invoice value(incl. VAT)
+                  <span className="info-span label-info">Invoice value(incl. VAT)
                     <i
                       className="fa fa-info info-icon"
                       onClick={handleClick}
@@ -300,7 +306,7 @@ const Details = () => {
 
                 </div>
 
-                <span className='info-span2'>
+                <span className='info-span2 label-info'>
                   {/* remises comprises (hors reprise)  */}
                   including discounts (excluding trade-in)
                 </span>
@@ -324,7 +330,7 @@ const Details = () => {
               </div>
             </div>
             <div className="detail-row row mb-3 d-flex flex-column flex-sm-column flex-md-row">
-              <div className="col-lg-7 col-md-7">
+              <div className="col-lg-7 col-md-7 label-info">
                 {" "}
                 {/* Date d’achat de votre voiture */}
                 Date of purchase
@@ -347,7 +353,8 @@ const Details = () => {
                 Next
               </button>
             </div>
-          </form>
+           </form>
+          </div>
         </div>
       </div>
     </div>
