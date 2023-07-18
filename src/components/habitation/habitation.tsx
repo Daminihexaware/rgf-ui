@@ -12,8 +12,8 @@ const VehicleHabitation = () => {
           sizes="(max-width: 380px) 300px, (max-width: 450px) 450px, (max-width: 1000px) 600px"
           alt="Responsive Image"
         />
-        <div className=" container p-5">
-          <span className="h5 headerColor">
+        <div className=" container py-5">
+          <span className="h6 headerColor">
             Benefit from comprehensive car insurance for your private or
             professional car, with the best covers and at an ultra-competitive
             price!
@@ -65,7 +65,7 @@ const VehicleHabitation = () => {
             <div className="row px-0 d-flex align-items-center">
               <div className="col-md-8 align-items-center desktop-devices">
                 <img className="p-2 iconSize" src={calendar} />
-                <div className="h6 text-white text-size">
+                <div className="h6 text-white col-7 text-size">
                   {/* Je souhaite recevoir plus d informations */}Make an
                   appointment with a consultant
                 </div>
@@ -100,7 +100,7 @@ const VehicleHabitation = () => {
             <div className="row px-0 d-flex align-items-center">
               <div className="col-md-8 align-items-center desktop-devices">
                 <img className="p-2 iconSize" src={mail} />
-                <div className="h6 text-white col-6 text-size">
+                <div className="h6 text-white text-size">
                   {/* Composez votre assurance habitation ideale */}I would like
                   to receive more information
                 </div>
