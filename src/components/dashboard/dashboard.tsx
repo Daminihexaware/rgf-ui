@@ -9,7 +9,7 @@ import "./dashboard.css";
 
 const Dashboard = () => {
   return (
-    <div className="container mx-auto" style={{ width: "500px" }}>
+    <div className="container mx-auto">
       <div className="row d-flex justify-content-center">
         <img
           src={habitationImg}

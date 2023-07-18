@@ -3,11 +3,11 @@ import { contenthome, assurance_auto, habitation } from "../../assets/images";
 
 const Home = () => {
   return (
-    <div className="container mx-auto" style={{ width: "500px" }}>
+    <div className="container mx-auto">
       <div className="row d-flex justify-content-center">
         <img
           src={contenthome}
-          sizes="(max-width: 380px) 300px, (max-width: 450px) 450px, (max-width: 1000px) 600px"
+          
           alt="Responsive Image"
         />
 
