@@ -20,7 +20,7 @@ const VehicleSimulation = () => {
 
   return (
     <div>
-      <div className="container">
+      <div className="container mx-auto" style={{ width: "500px" }}>
         <div className={open ? "popup" : "popup-hide"}>
           <i
             className="fa fa-times-circle"
