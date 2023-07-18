@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const VehicleHabitation = () => {
   return (
-    <div className="container">
+    <div className="container mx-auto" style={{ width: "500px" }}>
       <div className="row d-flex justify-content-center">
         <img
           src={policybanner}
