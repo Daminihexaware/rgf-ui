@@ -77,7 +77,7 @@
     /* color:green; */
 }
 .main-div img{
-    width: 45%;
+    width: 50%;
 }
 
 .info-label{
@@ -148,7 +148,7 @@ select:focus{
         width: 44%;
     }
     .main-div img{
-        width: 48%;
+        width: 50%;
     }
     .amount{
         margin-left: 5px;
@@ -175,7 +175,7 @@ select:focus{
         width: 90%;
     }
     .main-div img{
-        width: 95%;
+        width: 99%;
     }
     
    .form-select{
