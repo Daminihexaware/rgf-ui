@@ -97,7 +97,7 @@ const Details = () => {
               Back
             </button>
           </Link>
-          <h5>
+          <h5 className="">
             {/* Votre voiture */}
             Your Car :
             <hr className="horizontal-line" />
