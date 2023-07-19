@@ -41,7 +41,7 @@
     cursor:pointer;
 }
 .horizontal-line{
-    width:6rem;
+    width:4rem !important;
     height:0.18rem;
     color:#00ad73;
     background-color: #00ad73;
@@ -71,6 +71,13 @@
 .details-info{
  /* background-color: orange; */
  width: 40%;
+}
+.details-label{
+    font-size: 0.95rem;
+    /* color:green; */
+}
+.main-div img{
+    width: 45%;
 }
 
 .info-label{
@@ -140,6 +147,9 @@ select:focus{
     .details-info{
         width: 44%;
     }
+    .main-div img{
+        width: 48%;
+    }
     .amount{
         margin-left: 5px;
     }
@@ -163,6 +173,9 @@ select:focus{
 @media only screen and (max-width: 576px){
     .details-info{
         width: 90%;
+    }
+    .main-div img{
+        width: 95%;
     }
     
    .form-select{
