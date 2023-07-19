@@ -17,6 +17,7 @@
     border:0;
     margin-left: -1rem;
     text-decoration: underline grey 0.08rem;
+    margin-bottom: 0.5rem ;
 }
 /* icons */
 .fa-chevron-left{
@@ -70,7 +71,7 @@
 }
 .details-info{
  /* background-color: orange; */
- width: 40%;
+ width: 45%;
 }
 .details-label{
     font-size: 0.95rem;
@@ -78,6 +79,10 @@
 }
 .main-div img{
     width: 50%;
+    margin-bottom: 1rem;
+}
+h5{
+    margin-bottom: 2rem !important;
 }
 
 .info-label{
@@ -131,7 +136,7 @@ select:focus{
 /* //Media Query */
 @media only screen and (max-width: 1024px){
     .details-info{
-        width: 42%;
+        width: 45%;
     }
     .popup1{
         left:32%;
