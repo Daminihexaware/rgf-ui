@@ -19,8 +19,8 @@ const VehicleSimulation = () => {
 
   return (
     <div>
-      <div className="col-md-6 offset-md-3">
-        <div className="container mx-auto">
+      <div className="container mx-auto">
+        <div className="col-md-6 offset-md-3">
           <div className={open ? "popup" : "popup-hide"}>
             <i
               className="fa fa-times-circle"
@@ -60,7 +60,11 @@ const VehicleSimulation = () => {
           </div>
           <div className={open ? "simulation-info-blur" : "simulation-info"}>
             <div>
-              <img src={policybanner} className="content-home" />
+              <img
+                src={policybanner}
+                className="content-home"
+                sizes="(max-width: 380px) 300px, (max-width: 450px) 450px, (max-width: 1000px) 600px"
+              />
             </div>
             <div className="p-3 container">
               <span className="h4">

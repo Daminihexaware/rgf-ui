@@ -66,9 +66,24 @@
   .btn-size {
     min-width: 145px !important;
     width: 145px !important;
-    margin-left: 60px !important;;
+    margin-left: 60px !important;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .mobile-devices {
+    display: block !important;
   }
 
+  .desktop-devices {
+    display: none !important;
+  }
+
+  .btn-size {
+    min-width: 145px !important;
+    width: 145px !important;
+    margin-left: 60px !important;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -82,14 +97,18 @@
   .btn-size {
     min-width: 145px !important;
     width: 145px !important;
-    margin-left: 60px !important;;
+    margin-left: 60px !important;
   }
 
+  .row > div {
+    padding-left: 5px !important;
+  }
 }
 
 @media only screen and (max-width: 320px) {
   .mobile-devices {
     display: block !important;
+    padding-left: 4px !important;
   }
   .desktop-devices {
     display: none !important;
